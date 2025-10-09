@@ -1,125 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CT Financial Balance Sheet</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medical Tests for Biomarkers — Reference</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f7fa;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-    table {
-      width: 80%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background-color: white;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px 15px;
-      text-align: left;
-    }
-    th {
-      background-color: #2c3e50;
-      color: white;
-    }
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-    .section-title {
-      background-color: #34495e;
-      color: #fff;
-      font-weight: bold;
-      text-align: center;
-    }
-    tfoot td {
-      font-weight: bold;
-      background-color: #eaf2f8;
-    }
+    :root{--bg:#f6f9fc;--card:#fff;--muted:#556;--accent:#0b5fff}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg); color:#102; margin:0; padding:28px}
+    .container{max-width:960px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    h1{font-size:20px;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 20px rgba(12,20,40,0.06);margin-bottom:14px}
+    h2{font-size:16px;margin:0 0 10px}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{padding:8px;border-bottom:1px solid #eef2f5;text-align:left;font-size:13px}
+    th{background:#fbfdff;color:var(--muted);font-weight:600}
+    .muted{color:var(--muted);font-size:13px}
+    .small{font-size:12px;color:var(--muted)}
+    .print-btn{background:var(--accent);color:white;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+    @media print{body{padding:8mm} header .print-btn{display:none} .card{box-shadow:none;border:1px solid #ddd}}
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Medical Tests — Biomarker Reference</h1>
+        <div class="small">Grouped by system / test category. Use when requesting lab panels or interpreting results.</div>
+      </div>
+      <div>
+        <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+      </div>
+    </header>
 
-  <h1>T. CHENGAPPA</h1>
-  <center><h2>Financial Balance Sheet - 2025</h2></center>
+    <section class="card">
+      <h2>Vital signs (bedside tests)</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test / Method</th><th>Sample / Type</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Heart rate (HR)</td><td>Pulse measurement / ECG</td><td>—</td><td>Measured at rest; ECG for arrhythmia</td></tr>
+          <tr><td>Blood pressure</td><td>Sphygmomanometer (manual/automated)</td><td>—</td><td>Record systolic/diastolic</td></tr>
+          <tr><td>Oxygen saturation (SpO₂)</td><td>Pulse oximetry</td><td>—</td><td>Non-invasive fingertip sensor</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-  <table>
-    <tr class="section-title">
-      <td colspan="2">Assets</td>
-    </tr>
-    <tr>
-      <td>Cash</td>
-      <td>₹ 1,00,000</td>
-    </tr>
-    <tr>
-      <td>Anuradha </td>
-      <td>₹ 2,00,000</td>
-    </tr>
-    <tr>
-      <td>Inventory</td>
-      <td>₹ 75,000</td>
-    </tr>
-    <tr>
-      <td>Property & Equipment</td>
-      <td>₹ 3,00,000</td>
-    </tr>
-    <tfoot>
-      <tr>
-        <td>Total Assets</td>
-        <td>₹ 5,25,000</td>
-      </tr>
-    </tfoot>
-  </table>
+    <section class="card">
+      <h2>Basic metabolic / glucose</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test Name</th><th>Sample</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Fasting Glucose</td><td>Fasting Blood Sugar (FBS)</td><td>Venous blood</td><td>8–12 hour fasting preferred</td></tr>
+          <tr><td>Random Glucose</td><td>Random Blood Sugar (RBS)</td><td>Venous/Capillary</td><td>Useful for symptomatic pts</td></tr>
+          <tr><td>HbA1c</td><td>Glycated Hemoglobin (HbA1c)</td><td>Whole blood</td><td>Reflects average glucose ~3 months</td></tr>
+          <tr><td>Insulin</td><td>Fasting Insulin</td><td>Serum</td><td>Used with glucose to calculate HOMA-IR</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-  <table>
-    <tr class="section-title">
-      <td colspan="2">Liabilities</td>
-    </tr>
-    <tr>
-      <td>Accounts Payable</td>
-      <td>₹ 40,000</td>
-    </tr>
-    <tr>
-      <td>Bank Loan</td>
-      <td>₹ 1,50,000</td>
-    </tr>
-    <tfoot>
-      <tr>
-        <td>Total Liabilities</td>
-        <td>₹ 1,90,000</td>
-      </tr>
-    </tfoot>
-  </table>
+    <section class="card">
+      <h2>Lipid profile & advanced lipids</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test</th><th>Sample</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Total cholesterol / LDL / HDL / Triglycerides</td><td>Standard Lipid Profile (fasting or non-fasting)</td><td>Serum</td><td>Fasting historically recommended for TG accuracy</td></tr>
+          <tr><td>ApoA1 / ApoB</td><td>Apolipoprotein A1 & B</td><td>Serum</td><td>Risk stratification beyond LDL</td></tr>
+          <tr><td>Lp(a)</td><td>Lipoprotein (a)</td><td>Serum</td><td>Genetic cardiovascular risk marker</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-  <table>
-    <tr class="section-title">
-      <td colspan="2">Owner’s Equity</td>
-    </tr>
-    <tr>
-      <td>Capital</td>
-      <td>₹ 3,00,000</td>
-    </tr>
-    <tr>
-      <td>Retained Earnings</td>
-      <td>₹ 35,000</td>
-    </tr>
-    <tfoot>
-      <tr>
-        <td>Total Equity</td>
-        <td>₹ 3,35,000</td>
-      </tr>
-    </tfoot>
-  </table>
+    <section class="card">
+      <h2>Liver function tests (LFTs)</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test</th><th>Sample</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>ALT, AST, ALP</td><td>Liver Function Panel</td><td>Serum</td><td>Enzyme elevations indicate hepatocellular or cholestatic injury</td></tr>
+          <tr><td>Bilirubin</td><td>Serum Bilirubin (total & direct)</td><td>Serum</td><td>Assess jaundice / hemolysis</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-  <h2 style="text-align:center; color:#2c3e50;">Assets = Liabilities + Owner’s Equity ✔</h2>
+    <section class="card">
+      <h2>Renal & electrolytes</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test</th><th>Sample</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Creatinine / eGFR</td><td>Serum Creatinine with eGFR calculation</td><td>Serum</td><td>Kidney function; eGFR estimated from Cr, age, sex</td></tr>
+          <tr><td>BUN</td><td>Blood Urea Nitrogen</td><td>Serum</td><td>Renal clearance / protein breakdown marker</td></tr>
+          <tr><td>Na / K / Cl</td><td>Serum Electrolytes</td><td>Serum</td><td>Assess hydration & kidney/adrenal function</td></tr>
+          <tr><td>Uric Acid</td><td>Serum Uric Acid</td><td>Serum</td><td>Gout/metabolic risk</td></tr>
+        </tbody>
+      </table>
+    </section>
 
+    <section class="card">
+      <h2>Hematology (CBC & iron studies)</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test</th><th>Sample</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Hemoglobin, WBC, Platelets</td><td>Complete Blood Count (CBC)</td><td>Whole blood</td><td>Basic blood health and infection/inflammation clues</td></tr>
+          <tr><td>Iron, Ferritin, Transferrin Saturation</td><td>Iron Studies (Serum iron, Ferritin, TIBC/Transferrin)</td><td>Serum</td><td>Evaluate iron deficiency/overload</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Thyroid & endocrine</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test</th><th>Sample</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>TSH, Free T4 (and optionally Free T3)</td><td>Thyroid Function Tests</td><td>Serum</td><td>First-line assessment of thyroid status</td></tr>
+          <tr><td>Cortisol</td><td>Serum Cortisol (AM) or 24-hr Urine/Saliva</td><td>Serum/Urine/Saliva</td><td>Evaluate adrenal function; time of day matters</td></tr>
+          <tr><td>Insulin</td><td>Fasting Insulin</td><td>Serum</td><td>Used for insulin resistance assessment (HOMA-IR)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Vitamins & B-complex</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test</th><th>Sample</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Vitamin D</td><td>25-Hydroxy Vitamin D</td><td>Serum</td><td>Best indicator of vitamin D status</td></tr>
+          <tr><td>Vitamin B12</td><td>Serum Vitamin B12</td><td>Serum</td><td>Neurological & hematological health</td></tr>
+          <tr><td>Folate</td><td>Serum Folate / RBC Folate</td><td>Serum or RBC</td><td>RBC folate reflects longer-term stores</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Hormones (sex & adrenal)</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test</th><th>Sample</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Testosterone (total/free)</td><td>Serum Testosterone</td><td>Serum</td><td>Timing and sex-specific reference ranges matter</td></tr>
+          <tr><td>Estradiol (E2)</td><td>Serum Estradiol</td><td>Serum</td><td>Cycle-phase matters for women</td></tr>
+          <tr><td>Progesterone</td><td>Serum Progesterone</td><td>Serum</td><td>Interpret with menstrual timing</td></tr>
+          <tr><td>DHEA-S</td><td>DHEA-Sulfate</td><td>Serum</td><td>Adrenal androgen marker</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Inflammatory & immune markers</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test</th><th>Sample</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>CRP / hs-CRP</td><td>C-Reactive Protein (standard or high-sensitivity)</td><td>Serum</td><td>hs-CRP for cardiovascular risk assessment</td></tr>
+          <tr><td>ESR</td><td>Erythrocyte Sedimentation Rate</td><td>Whole blood</td><td>Non-specific inflammation marker</td></tr>
+          <tr><td>IL-6</td><td>Interleukin-6</td><td>Serum/Plasma</td><td>Research / specialty labs; cytokine level</td></tr>
+          <tr><td>TNF-α</td><td>Tumor Necrosis Factor-alpha</td><td>Serum/Plasma</td><td>Often measured in research or immunology panels</td></tr>
+          <tr><td>Homocysteine</td><td>Plasma Homocysteine</td><td>Plasma</td><td>Cardiovascular risk & B-vitamin status</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Urine analysis</h2>
+      <table>
+        <thead><tr><th>Biomarker</th><th>Test</th><th>Sample</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Urine pH / Specific gravity</td><td>Urinalysis (dipstick + microscopy)</td><td>Urine</td><td>Hydration & concentrating ability</td></tr>
+          <tr><td>Protein / Microalbumin</td><td>Urine Protein / Microalbumin-to-Creatinine Ratio (ACR)</td><td>Urine</td><td>Detects early kidney damage</td></tr>
+          <tr><td>Glucose / Ketones</td><td>Urinalysis / Dipstick</td><td>Urine</td><td>Diabetes monitoring or ketoacidosis screening</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Optional / advanced tests (specialty)</h2>
+      <table>
+        <thead><tr><th>Purpose</th><th>Example Tests</th><th>Where to order</th></tr></thead>
+        <tbody>
+          <tr><td>Cardiovascular risk refinement</td><td>ApoB/ApoA1, Lp(a), Coronary calcium (imaging)</td><td>Specialty lab / imaging center</td></tr>
+          <tr><td>Insulin resistance & metabolism</td><td>Fasting insulin, HOMA-IR, Oral Glucose Tolerance Test (OGTT)</td><td>Clinical lab</td></tr>
+          <tr><td>Inflammation / cytokines</td><td>IL-6, TNF-α, multiplex cytokine panels</td><td>Reference / research labs</td></tr>
+          <tr><td>Oxidative stress & mitochondrial</td><td>MDA, TAC, specialized assays</td><td>Research labs</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">Note: advanced tests (cytokines, oxidative markers) are often performed in specialty or research laboratories and may not be routinely available at standard outpatient labs.</p>
+    </section>
+
+    <footer class="small muted">This page is a general reference. Test selection and interpretation should be done in consultation with a qualified clinician.</footer>
+  </div>
 </body>
 </html>
